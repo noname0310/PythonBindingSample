@@ -6,7 +6,7 @@ struct Fastrand {
 }
 
 impl Fastrand {
-    fn new() -> Fastrand{
+    fn new() -> Fastrand {
         Fastrand { rctr: 0x956126898 }
     }
 
