@@ -27,9 +27,9 @@ def main():
     ax = plt.subplot()
     ax.set_xticks(range(len(elapsedtimes)))
     ax.set_xticklabels([x[1] for x in elapsedtimes])
-    plt.title("Monte Carlo Method PI Compute Benchmark")
+    plt.title(f"Monte Carlo Method PI Compute Benchmark\nIteration Count: {iterations}")
     plt.xlabel("language")
-    plt.ylabel("elapsed time (lowr is better)")
+    plt.ylabel("elapsed time(ms)\nlower is better")
     plt.show()
 
 if __name__ == '__main__':

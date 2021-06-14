@@ -8,9 +8,6 @@ edition = "2018"
 name = "mc_pi"
 crate-type = ["cdylib"]
 
-[dependencies]
-rand = "0.8.3"
-
 [dependencies.pyo3]
 version = "0.13.2"
 features = ["extension-module"]
