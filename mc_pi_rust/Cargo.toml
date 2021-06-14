@@ -1,0 +1,16 @@
+[package]
+name = "mc-pi"
+version = "0.1.0"
+authors = ["noname <48761044+noname0310@users.noreply.github.com>"]
+edition = "2018"
+
+[lib]
+name = "mc_pi"
+crate-type = ["cdylib"]
+
+[dependencies]
+rand = "0.8.3"
+
+[dependencies.pyo3]
+version = "0.13.2"
+features = ["extension-module"]
