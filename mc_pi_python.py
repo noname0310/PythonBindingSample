@@ -1,3 +1,4 @@
+#xorshift method https://en.wikipedia.org/wiki/Xorshift
 class fastrand:
     def __init__(self):
         self.rctr = 0x01234567
