@@ -15,13 +15,13 @@ impl Fastrand {
     }
 
     fn rand(&mut self) -> f64 {
-        self.rctr = self.rctr % 0xFFFFFFFF;
+        self.rctr %=  0xFFFFFFFF;
         self.rctr ^= self.rctr.wrapping_shl(13);
-        self.rctr = self.rctr % 0xFFFFFFFF;
+        self.rctr %=  0xFFFFFFFF;
         self.rctr ^= self.rctr.wrapping_shr(7);
-        self.rctr = self.rctr % 0xFFFFFFFF;
+        self.rctr %=  0xFFFFFFFF;
         self.rctr ^= self.rctr.wrapping_shl(17);
-        self.rctr = self.rctr % 0xFFFFFFFF;
+        self.rctr %=  0xFFFFFFFF;
         ((self.rctr % 0xFFFFFFFF) as f64) / (0xFFFFFFFFu32 as f64)
         //self.rctr as f64 / 0xFFFFFFFFFFFFFFFFu64 as f64
     }

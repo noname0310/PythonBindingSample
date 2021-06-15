@@ -3,13 +3,13 @@ class fastrand:
     def __init__(self, seed=0x956126898):
         self.rctr = seed
     def rand(self):
-        self.rctr = self.rctr % 0xFFFFFFFF
+        self.rctr %=  0xFFFFFFFF
         self.rctr ^= (self.rctr << 13)
-        self.rctr = self.rctr % 0xFFFFFFFF
+        self.rctr %=  0xFFFFFFFF
         self.rctr ^= (self.rctr >> 7)
-        self.rctr = self.rctr % 0xFFFFFFFF
+        self.rctr %=  0xFFFFFFFF
         self.rctr ^= (self.rctr << 17)
-        self.rctr = self.rctr % 0xFFFFFFFF
+        self.rctr %=  0xFFFFFFFF
         return float(self.rctr % 0xFFFFFFFF)/0xFFFFFFFF
 
 def mc_pi(acc: int) -> float:  

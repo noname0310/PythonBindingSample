@@ -1,5 +1,7 @@
 import mc_pi_rust
+import mc_pi_csharp
 import mc_pi_python
+import ctypes
 import time
 import matplotlib.pyplot as plt
 
@@ -21,6 +23,10 @@ def main():
     (result, time) = logging_time(lambda: mc_pi_rust.mc_pi(iterations))
     print(f"mc_pi_rust: {time} ms, PI={result}")
     elapsedtimes.append((time, "rust"))
+
+    (result, time) = logging_time(lambda: mc_pi_csharp.mc_pi(iterations))
+    print(f"mc_pi_csharp: {time} ms, PI={result}")
+    elapsedtimes.append((time, "csharp"))
 
     elapsedtimes.sort()
     plt.bar(range(len(elapsedtimes)), [x[0] for x in elapsedtimes])

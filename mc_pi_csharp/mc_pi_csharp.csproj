@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DllExport" Version="1.7.4" />
+    <PackageReference Include="UnmanagedExports.Repack" Version="1.0.4" />
+  </ItemGroup>
+
+</Project>

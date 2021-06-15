@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31320.298
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mc_pi_csharp", "mc_pi_csharp.csproj", "{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Debug|x64.ActiveCfg = Debug|x64
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Debug|x64.Build.0 = Debug|x64
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Release|x64.ActiveCfg = Release|x64
+		{A736D446-8FFC-473F-9C7B-AEAB640F0F0D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0395811E-B39C-45B3-96C2-00AE8AA5B6C1}
+	EndGlobalSection
+EndGlobal
