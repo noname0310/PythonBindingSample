@@ -5,11 +5,10 @@ namespace mc_pi_csharp
 {
     public class McpiCsharp
     {
-        private class Fastrand
+        private struct Fastrand
         {
             private ulong _rctr;
-            public Fastrand() => _rctr = 0x956126898;
-            public void SplitMix64(ulong seed) => _rctr = seed;
+            public void SplitMix64(ulong seed = 0x956126898) => _rctr = seed;
             public double Rand()
             {
                 _rctr %= 0xFFFFFFFF;
@@ -27,6 +26,7 @@ namespace mc_pi_csharp
         public static double Mcpi(int acc)
         {
             var rng = new Fastrand();
+            rng.SplitMix64();
             var hitCount = 0;
             var count = 0;
             for (var i = 0; i < acc; i++)
