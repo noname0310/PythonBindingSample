@@ -1,10 +1,12 @@
+import clr
 import mc_pi_rust
 import mc_pi_csharp
 import mc_pi_python
 import ctypes
 import time
 import matplotlib.pyplot as plt
-
+clr.AddReference("D:/noname/Projects/GitHub/PythonBindingSample/mc_pi_csharp_df/bin/Release/mc_pi_csharp_df.dll")
+import mc_pi_csharp_df
 def logging_time(fn):
     start_time = time.time()
     result = fn()
@@ -20,11 +22,11 @@ def main():
     print(f"mc_pi_python: {time} ms, PI={result}")
     elapsedtimes.append((time, "python"))
     
-    (result, time) = logging_time(lambda: mc_pi_rust.mc_pi(iterations))
+    #(result, time) = logging_time(lambda: mc_pi_rust.mc_pi(iterations))
     print(f"mc_pi_rust: {time} ms, PI={result}")
     elapsedtimes.append((time, "rust"))
 
-    (result, time) = logging_time(lambda: mc_pi_csharp.mc_pi(iterations))
+    (result, time) = logging_time(lambda: mc_pi_csharp_df.McpiCsharp.Mcpi(iterations))
     print(f"mc_pi_csharp: {time} ms, PI={result}")
     elapsedtimes.append((time, "csharp"))
 
